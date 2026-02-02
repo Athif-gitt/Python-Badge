@@ -16,9 +16,17 @@
 # a = [1, 2]
 # print(id(a))
 
-x = [1, 2, 3]
-print(id(x))
+# x = [1, 2, 3]
+# print(id(x))
 
-x.append(4)
-print(id(x))
+# x.append(4)
+# print(id(x))
+
+a = 10
+b = 4
+
+# print(a & b)
+# print(a | b)
+# print(~a)
+# print(a ^ b)
 
