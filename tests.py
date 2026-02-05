@@ -157,7 +157,28 @@
 # dog1 = Dog("Toomy", "Canine")
 # print(dog1.type)
 
+# class EvenNumbers:
+#     def __init__(self, start, end):
+#         self.start = start
+#         self.end = end
 
+#     def __iter__(self):
+#         return self
+    
+#     def __next__(self):
+#         if self.start > self.end:
+#             raise StopIteration
+#         value = self.start
+#         self.start += 2
+#         return value
+
+# evens = EvenNumbers(2, 20)
+
+# for i in evens:
+#     print(i)
+        
+
+l = [10, 20, 30, 40]
 
 
 
