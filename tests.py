@@ -223,7 +223,17 @@
 # for s in squares():
 #     print(s)
 
-names = ["Alice", "Bob", "Jonathan"]
+# names = ["Alice", "Bob", "Jonathan"]
+
+# print(list(filter(lambda x: len(x) >= 5, names)))
+
+# lst = ["1", "2", "3"]
+# print(list(map(lambda x: int(x), lst)))
+
+# from functools import reduce
+
+# lst = [1, 2, 3]
+# print(int(reduce(lambda x, y: x + y, lst)))
 
 
 
