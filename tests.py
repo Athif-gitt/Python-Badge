@@ -178,9 +178,52 @@
 #     print(i)
         
 
-l = [10, 20, 30, 40]
+# l = [10, 20, 30, 40]
+
+# class Fetch:
+#     def __init__(self, l):
+#         self.l = l
+
+#     def __iter__(self):
+#         return self
+    
+#     def __next__(self):
+#         for i in self.l:
+#             return i
+    
+# fetches = Fetch(l)
+# for f in fetches:
+#     print(f)
 
 
+# lst = [10, 20, 30, 40]
+
+# a = iter(lst)
+
+# print(next(a))
+# print(next(a))
+# print(next(a))
+# print(next(a))
+# print(next(a))
+
+# def generator(i):
+#     while i > 0:
+#         yield i
+#         i -= 1
+
+# b = generator(5)
+
+# for i in b:
+#     print(i)
+
+# def squares():
+#     for i in range(1, 10):
+#         yield i ** 2
+
+# for s in squares():
+#     print(s)
+
+names = ["Alice", "Bob", "Jonathan"]
 
 
 
