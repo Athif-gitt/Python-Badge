@@ -235,6 +235,17 @@
 # lst = [1, 2, 3]
 # print(int(reduce(lambda x, y: x + y, lst)))
 
+# keys = ["a", "b"]
+# values = [1, 2]
+# print(dict(zip(keys, values)))
+
+# print(list(zip([1,2], [3,4], [5,6])))
+
+# names = ["Alice", "Bob"]
+# marks = [80, 90]
+
+# for n, m in zip(names, marks):
+#     print(n, m)
 
 
 
