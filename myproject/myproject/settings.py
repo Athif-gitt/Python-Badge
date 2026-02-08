@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'users',
+    'rest_framework',
+    'serializer',
 ]
 
 MIDDLEWARE = [
