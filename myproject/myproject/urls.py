@@ -30,6 +30,7 @@ urlpatterns = [
     path('api/token/', TokenObtainPairView.as_view()),
     path('api/token/refresh/', TokenRefreshView.as_view()),
     path('api/profile/', include('image.urls')),
+    path('blog/', include('blog.urls')),
 ]
 
 if settings.DEBUG:
