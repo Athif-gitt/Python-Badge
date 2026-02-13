@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Blog
 from .serializers import BlogSerializer
+from rest_framework import viewsets
 
 
 
@@ -14,10 +15,10 @@ class BlogEditView(APIView):
         except Blog.DoesNotExist:
             return None
     
-    def get(self, request):
-        blogs = Blog.objects.all()
-        serializer = BlogSerializer(blogs, many=True)
-        return Response(serializer.data, status=status.HTTP_200_OK)
+    # def get(self, request):
+    #     blogs = Blog.objects.all()
+    #     serializer = BlogSerializer(blogs, many=True)
+    #     return Response(serializer.data, status=status.HTTP_200_OK)
     
     def post(self, request):
         serializer = BlogSerializer(data=request.data)
@@ -62,6 +63,12 @@ class BlogEditView(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    
+class BlogListView(viewsets.ModelViewSet):
+    queryset = Blog.objects.all()
+    serializer_class = BlogSerializer
+
+
 
     
         

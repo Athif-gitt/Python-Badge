@@ -1,5 +1,6 @@
 from django.urls import path
-from .views import BlogEditView
+from .views import BlogEditView, BlogListView
+from rest_framework.routers import DefaultRouter
 
 
 urlpatterns = [
@@ -7,3 +8,10 @@ urlpatterns = [
     path('blog/', BlogEditView.as_view()),
     path('blog/<int:pk>/', BlogEditView.as_view()),
 ]
+
+router = DefaultRouter()
+router.register(r'blogs', BlogListView)
+
+urlpatterns += router.urls
+
+
