@@ -65,8 +65,26 @@ class BlogEditView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 class BlogListView(viewsets.ModelViewSet):
-    queryset = Blog.objects.all()
+    queryset = Blog.objects.raw('SELECT * FROM blog_blog')
     serializer_class = BlogSerializer
+
+class DjangoBlogView(APIView):
+
+    def get(self, request):
+        django_blogs = Blog.objects.filter(content__icontains='Django')
+        try:
+            serializer = BlogSerializer(django_blogs, many=True)
+        except Blog.DoesNotExist:
+            return Response({"message": "Does not exist"}, status=status.HTTP_404_NOT_FOUND)
+        # if serializer.is_valid():
+        #     return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+
+    
+        
+
+    
 
 
 

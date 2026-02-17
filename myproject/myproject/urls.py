@@ -31,7 +31,14 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view()),
     path('api/profile/', include('image.urls')),
     path('blog/', include('blog.urls')),
+    path('authentication/', include('authentication.urls')),
+    path('api/auth/', include('user.urls')),
+    path('dump/', include('dump.urls')),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    path('api-auth/', include('rest_framework.urls')),
+]
