@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .serializers import DumpSerializer
 from .models import Books
+from rest_framework import viewsets
 
 class DumpView(APIView):
 
@@ -42,6 +43,16 @@ class DumpView(APIView):
         
         book.delete()
         return Response({"message": "Deleted!"}, status=status.HTTP_410_GONE)
+    
+class DumpGenericView(viewsets.ModelViewSet):
+
+    queryset = Books.objects.all()
+    serializer_class = DumpSerializer
+
+
+
+
+
 
 
 

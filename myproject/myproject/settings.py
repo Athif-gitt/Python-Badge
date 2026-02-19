@@ -52,9 +52,10 @@ INSTALLED_APPS = [
     'image',
     'blog',
     'authentication',
-    'user',
+    # 'user',
     'rest_framework.authtoken',
     'dump',
+    'core',
 ]
 
 MIDDLEWARE = [

@@ -34,6 +34,7 @@ urlpatterns = [
     path('authentication/', include('authentication.urls')),
     path('api/auth/', include('user.urls')),
     path('dump/', include('dump.urls')),
+    path('movies/', include('core.urls')),
 ]
 
 if settings.DEBUG:
